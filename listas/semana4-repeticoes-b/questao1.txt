@@ -1,0 +1,2 @@
+1. O que é escrito na tela com a execução do seguinte trecho de código?
+O código imprime a sequência "0 1 2 3 " 5 vezes, cada vez em uma nova linha

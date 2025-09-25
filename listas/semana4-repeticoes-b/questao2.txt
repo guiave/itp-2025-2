@@ -1,0 +1,2 @@
+2. O que é escrito na tela com a execução do seguinte trecho de código?
+O programa pede um número n e depois imprime n linhas. A linha i (de 1 a n) contém os números de 1 até i, separados por espaços.

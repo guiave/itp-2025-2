@@ -1,0 +1,2 @@
+4. O que é escrito na tela com a execução do seguinte trecho de código?
+Pede um número n. Depois, imprime uma grade de n por n números sem espaços. O número na linha i e coluna j é o resultado da soma i + j.
