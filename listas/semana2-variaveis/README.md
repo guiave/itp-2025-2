@@ -1,7 +1,7 @@
 # problema1.c
 
 ```bash
-gcc -o problema1 problema1.c -lm
+gcc -o problema1 problema1.c
 ./problema1
 ```
 
@@ -15,7 +15,7 @@ gcc -o problema2 problema2.c
 # problema3.c
 
 ```bash
-gcc -o problema3 problema3.c
+gcc -o problema3 problema3.c -lm
 ./problema3
 ```
 
