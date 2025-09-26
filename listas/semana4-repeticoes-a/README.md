@@ -1,27 +1,27 @@
-# Problema1.c
+# problema1.c
 
 ```bash
-gcc -o Problema1 Problema1.c
-./Problema1
+gcc -o problema1 problema1.c
+./problema1
 ```
 
-# Problema2.c
+# problema2.c
 
 ```bash
-gcc -o Problema2 Problema2.c -lm
-./Problema2
+gcc -o problema2 problema2.c -lm
+./problema2
 ```
 
-# Problema3.c
+# problema3.c
 
 ```bash
-gcc -o Problema3 Problema3.c -lm
-./Problema3
+gcc -o problema3 problema3.c -lm
+./problema3
 ```
 
-# Problema4.c
+# problema4.c
 
 ```bash
-gcc -o Problema4 Problema4.c -lm
-./Problema4
+gcc -o problema4 problema4.c -lm
+./problema4
 ```
