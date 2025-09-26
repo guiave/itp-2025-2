@@ -1,56 +1,56 @@
-# Problema1.c
+# problema1.c
 
 ```bash
-gcc -o Problema1 Problema1.c -lm
-./Problema1
+gcc -o problema1 problema1.c -lm
+./problema1
 ```
 
-# Problema2.c
+# problema2.c
 
 ```bash
-gcc -o Problema2 Problema2.c
-./Problema2
+gcc -o problema2 problema2.c
+./problema2
 ```
 
-# Problema3.c
+# problema3.c
 
 ```bash
-gcc -o Problema3 Problema3.c
-./Problema3
+gcc -o problema3 problema3.c
+./problema3
 ```
 
-# Problema4.c
+# problema4.c
 
 ```bash
 
-gcc -o Problema4 Problema4.c
-./Problema4
+gcc -o problema4 problema4.c
+./problema4
 ```
 
-# Problema5.c
+# problema5.c
 
 ```bash
-gcc -o Problema5 Problema5.c
-./Problema5
+gcc -o problema5 problema5.c
+./problema5
 ```
 
-# Problema6.c
+# problema6.c
 
 ```bash
-gcc -o Problema6 Problema6.c
-./Problema6
+gcc -o problema6 problema6.c
+./problema6
 ```
 
-# Problema7.c
+# problema7.c
 
 ```bash
-gcc -o Problema7 Problema7.c -lm
-./Problema7
+gcc -o problema7 problema7.c -lm
+./problema7
 ```
 
-# Problema8.c
+# problema8.c
 
 ```bash
-gcc -o Problema8 Problema8.c -lm
-./Problema8
+gcc -o problema8 problema8.c -lm
+./problema8
 ```
