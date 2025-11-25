@@ -1,111 +1,132 @@
-### **Guia de Utilização: Calculadora Científica com Histórico**
+### **Guia de Utilização: Calculadora Científica Avançada**
 
-Bem-vindo à sua nova calculadora! Este guia irá ajudá-lo a usar todas as funcionalidades do programa de forma simples e eficaz.
+Bem-vindo à sua nova calculadora! Este software foi desenvolvido em C para oferecer desde cálculos simples até operações complexas com matrizes e manipulação de texto. Este guia irá ajudá-lo a explorar todas as ferramentas disponíveis.
 
 #### **Navegando pelo Menu Principal**
 
-Ao iniciar o programa, você verá o **Menu Principal**. Ele é o seu ponto de partida para todas as operações.
+Ao iniciar o programa, o terminal exibirá o **Menu Principal**. Ele é o centro de comando para todas as funcionalidades.
 
 ```
 ==================================================
-            MENU PRINCIPAL
+                 MENU PRINCIPAL
 ==================================================
 1. Calculadora Básica
 2. Calculadora Científica
-3. Mostrar Histórico
-4. Limpar Histórico
+3. Operações Matriciais
+4. Testes de String (Texto)
+5. Mostrar Histórico
+6. Limpar Histórico
 0. Sair
 ==================================================
 ```
 
-Para escolher uma opção, simplesmente digite o número correspondente e pressione a tecla **Enter**.
+Para selecionar uma ferramenta, digite o número correspondente e pressione **Enter**.
 
-Após realizar uma operação em qualquer modo, o programa perguntará se você deseja continuar. Digite `s` para sim ou `n` para não. Ao digitar `n`, você sempre retornará ao Menu Principal.
+> **Dica de Navegação:** Após concluir uma tarefa em qualquer modo, o programa perguntará se deseja continuar naquela função (`s` para sim, `n` para não). Ao escolher `n`, você retornará automaticamente para este menu.
 
 ---
 
 ### **1. Calculadora Básica (Opção 1)**
 
-Esta função permite que você calcule expressões matemáticas com as operações aritméticas mais comuns.
+Ideal para o dia a dia. Esta função processa expressões matemáticas completas respeitando a precedência de operadores.
 
 **Como usar:**
-1.  Escolha a **Opção 1** no menu principal.
-2.  Quando solicitado, digite a sua expressão matemática.
-3.  Pressione **Enter** para ver o resultado.
+1.  Escolha a **Opção 1**.
+2.  Digite a expressão completa na mesma linha.
+3.  Pressione **Enter**.
 
-**Operadores disponíveis:**
+**Operadores Suportados:**
 *   `+` (Soma)
 *   `-` (Subtração)
 *   `*` (Multiplicação)
 *   `/` (Divisão)
-*   `^` (Potenciação. Ex: `2^3` é 2 elevado a 3)
+*   `^` (Potência)
+*   `( )` (Parênteses para agrupar)
 
-**Regras e Dicas:**
-*   **Ordem de Operações:** A calculadora respeita a ordem matemática correta (primeiro potenciação, depois multiplicação/divisão e por último soma/subtração).
-*   **Uso de Parênteses:** Você pode usar parênteses `( )` para agrupar operações e alterar a ordem de prioridade.
-*   **Números Decimais:** Use o ponto (`.`) para separar as casas decimais (Ex: `3.14`).
-*   **Espaços:** Você pode usar espaços para tornar a expressão mais legível (Ex: `2 + 3 * 4` é o mesmo que `2+3*4`).
-
-**Exemplos de expressões:**
-*   `5 + 10 * 2` (Resultado: 25)
-*   `(5 + 10) * 2` (Resultado: 30)
-*   `100 / 4 - 5` (Resultado: 20)
-*   `2.5 * 4 + 2^3` (Resultado: 18)
+**Exemplos:**
+*   `2 + 2`
+*   `(10 * 5) / 2 + 3^2`
+*   `4.5 * 2 - 1`
 
 ---
 
 ### **2. Calculadora Científica (Opção 2)**
 
-Esta função oferece operações matemáticas mais avançadas, como trigonometria, logaritmos, raiz quadrada e fatorial. Diferente da calculadora básica, aqui você escolhe a operação e depois insere o número.
+Ferramentas avançadas para engenharia e matemática. Aqui você seleciona primeiro o tipo de cálculo e depois insere os valores.
 
-**Como usar:**
-1.  Escolha a **Opção 2** no menu principal.
-2.  Você verá um novo menu com as funções científicas disponíveis.
-3.  Escolha o número da função desejada e pressione **Enter**.
-4.  Siga as instruções para inserir os valores necessários.
-
-**Funções Disponíveis:**
-
-*   **1. Funções Trigonométricas:**
-    *   **Funções:** `sin` (seno), `cos` (cosseno), `tan` (tangente).
-    *   **Como usar:** Digite o nome da função (ex: `sin`) e depois o valor do ângulo.
-    *   **IMPORTANTE:** O ângulo deve ser inserido em **radianos**.
-
-*   **2. Logaritmos:**
-    *   **Funções:** `log10` (logaritmo na base 10) e `ln` (logaritmo natural).
-    *   **Como usar:** Digite o nome da função (ex: `ln`) e depois o número.
-    *   **IMPORTANTE:** O número deve ser maior que zero.
-
-*   **3. Raiz Quadrada:**
-    *   **Como usar:** Escolha a opção 3 e digite o número do qual deseja extrair a raiz.
-    *   **IMPORTANTE:** O número não pode ser negativo.
-
-*   **4. Potenciação:**
-    *   **Como usar:** Escolha a opção 4. Primeiro, digite o número da **base**, pressione **Enter**, e depois digite o número do **expoente**.
-
-*   **5. Fatorial (!):**
-    *   **Como usar:** Escolha a opção 5 e digite um número inteiro. A calculadora calculará o fatorial (ex: 5! = 5 × 4 × 3 × 2 × 1).
-    *   **IMPORTANTE:** O número deve ser um inteiro positivo entre 0 e 20.
+**Menu Interno:**
+1.  **Trigonometria:**
+    *   Digite a função (`sin`, `cos`, `tan`) e o ângulo em **radianos**.
+    *   *Exemplo:* `sin 1.57`
+2.  **Logaritmos:**
+    *   Digite o tipo (`log10`, `ln`) e o valor positivo.
+    *   *Exemplo:* `log10 100`
+3.  **Raiz Quadrada:**
+    *   Digite apenas o número (deve ser positivo).
+4.  **Potenciação:**
+    *   Digite a base e o expoente separados por espaço.
+    *   *Exemplo:* `2 3` (resulta em 8).
+5.  **Fatorial (!):**
+    *   Digite um número inteiro entre 0 e 20.
 
 ---
 
-### **3. Mostrar Histórico (Opção 3)**
+### **3. Operações Matriciais (Opção 3)**
 
-Esta opção permite que você visualize todos os cálculos que foram realizados desde que o programa foi iniciado.
+Realiza cálculos de álgebra linear com matrizes de tamanho dinâmico (você define o tamanho).
 
-**Como usar:**
-1.  Escolha a **Opção 3** no menu principal.
-2.  Uma lista numerada com todas as expressões calculadas e seus respectivos resultados será exibida na tela.
-3.  Se nenhum cálculo foi feito ainda, uma mensagem informará que o histórico está vazio.
+**Funcionalidades:**
+
+*   **1. Soma de Matrizes:**
+    *   Soma duas matrizes (A + B).
+    *   **Requisito:** As duas matrizes devem ter exatamente o mesmo número de linhas e colunas.
+
+*   **2. Multiplicação de Matrizes:**
+    *   Multiplica duas matrizes (A × B).
+    *   **Requisito:** O número de **colunas** da Matriz A deve ser igual ao número de **linhas** da Matriz B.
+
+*   **3. Transposição:**
+    *   Inverte as linhas pelas colunas de uma matriz.
+
+**Como preencher:**
+1.  O programa pedirá as dimensões: digite `Linhas Colunas` (ex: `2 2` para uma matriz 2x2).
+2.  Em seguida, preencha valor por valor conforme solicitado na tela (`[0][0]`, `[0][1]`, etc).
 
 ---
 
-### **4. Limpar Histórico (Opção 4)**
+### **4. Testes de String (Opção 4)**
 
-Use esta função para apagar todos os registros de cálculos salvos no histórico.
+Um módulo dedicado à manipulação e análise de textos (strings).
 
-**Como usar:**
-1.  Escolha a **Opção 4** no menu principal.
-2.  O programa pedirá uma confirmação para garantir que você não apague o histórico por acidente.
-3.  Digite `s` e pressione **Enter** para confirmar e limpar o histórico.
-4.  Se você digitar qualquer outra letra, a operação será cancelada e o histórico permanecerá intacto.
+**Funcionalidades:**
+
+1.  **Comparar:** Verifica se dois textos são iguais ou qual vem primeiro alfabeticamente.
+2.  **Copiar:** Cria uma cópia exata de um texto na memória.
+3.  **Concatenar:** Junta dois textos em um só.
+4.  **Tamanho/Análise:** Conta quantos caracteres existem e informa a quantidade de **Vogais** e **Consoantes**.
+5.  **Inverter:** Escreve o texto de trás para frente (ex: "ROMA" vira "AMOR").
+
+---
+
+### **5. Mostrar Histórico (Opção 5)**
+
+Visualize uma lista de todos os cálculos bem-sucedidos realizados durante a sessão atual.
+
+**Detalhes:**
+*   O histórico é **dinâmico**: ele cresce automaticamente conforme você realiza mais contas, sem limite fixo inicial.
+*   Exibe a expressão original e o resultado final.
+
+---
+
+### **6. Limpar Histórico (Opção 6)**
+
+Apaga todos os registros salvos na memória para reiniciar a listagem.
+
+**Segurança:**
+*   O programa pedirá uma confirmação (`sim` ou `s`).
+*   Se confirmado, a memória é liberada e o contador volta a zero.
+
+---
+
+**Desenvolvido com:** Linguagem C (Padrão C99)
+**Recursos Técnicos:** Alocação Dinâmica, Ponteiros, Structs e Manipulação de Arquivos.
