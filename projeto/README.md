@@ -19,6 +19,16 @@ Ao iniciar o programa, o terminal exibirá o **Menu Principal**. Ele é o centro
 0. Sair
 ==================================================
 ```
+#### Comando para compilar o código:
+```bash
+gcc main.c -o calculadora -lm
+```
+
+#### Execução:
+
+```bash
+./calculadora
+```
 
 Para selecionar uma ferramenta, digite o número correspondente e pressione **Enter**.
 
