@@ -1,4 +1,4 @@
-# Introdução a Técnicas de Programação - Unidade 1
+# Introdução a Técnicas de Programação - Unidade 2
 **Aluno**: Guilherme Avelino Macedo
 **Matrícula**: 20250026942
 **Período**: 2025.2
