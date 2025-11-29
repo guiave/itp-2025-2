@@ -9,34 +9,46 @@
 - `listas/`: Soluções das listas de exercícios
 - `README.md`: Este arquivo
 
-## 🚀 Projeto: Calculadora Científica
+## 🚀 Projeto: Calculadora Científica Avançada
 
-**Descrição**: Desenvolvido inteiramente em linguagem C, essa calculadora científica destaca-se pela implementação do robusto algoritmo *Shunting-Yard* para a avaliação de expressões matemáticas. Através do uso de pilhas para gerenciar operadores e operandos, o sistema analisa e resolve corretamente equações complexas, respeitando a ordem de precedência e o uso de parênteses. A lógica da interface de linha de comando, o motor de cálculo e o sistema de gerenciamento de histórico, que contém um *array* de *structs* são organizados corretamente no código. Há cuidado na validação de entrada e tratamento de erros.
+**Descrição**: Esta é uma evolução significativa da calculadora científica original, reestruturada para incorporar conceitos avançados de programação em C. O núcleo de cálculo ainda utiliza o robusto algoritmo *Shunting-Yard* para avaliar expressões, mas o projeto foi expandido com gerenciamento de memória dinâmica, tornando o histórico de cálculos flexível e escalável.
+
+Além das funcionalidades científicas, foram adicionados dois novos módulos: um para operações com matrizes (soma, multiplicação e transposição) e outro para manipulação de strings, demonstrando um domínio mais profundo sobre ponteiros e alocação de memória. O código foi refatorado para maior modularidade e clareza, com tratamento de erros aprimorado.
 
 **Repositório**: https://github.com/guiave/itp-2025-2/tree/main
 
-**Vídeo de Demonstração**: https://youtu.be/QiHkNAPs-HE
+**Vídeo de Demonstração**: https://www.youtube.com/watch?v=XYJDAYGmW1E
 
 ### Funcionalidades Implementadas:
-- Calculadora básica
-- Calculadora científica
-  - Função trigonométrica
-  - Logarítmos (log₁₀ ou ln)
+- **Calculadora Básica**: Operações aritméticas com respeito à precedência de operadores.
+- **Calculadora Científica**:
+  - Funções trigonométricas (seno, cosseno, tangente)
+  - Logaritmos (log₁₀ e ln)
   - Raiz quadrada
   - Potenciação
   - Fatorial
-- Mostrar histórico
-- Limpar histórico
+- **Operações com Matrizes**:
+  - Criação de matrizes com dimensões definidas pelo usuário.
+  - Soma, multiplicação e transposição de matrizes.
+- **Manipulação de Strings**:
+  - Comparação, cópia, concatenação, análise (tamanho, vogais) e inversão de strings.
+- **Gerenciamento de Histórico**:
+  - Mostrar histórico de todos os cálculos.
+  - Limpar o histórico.
 
-### Conceitos da U1 Aplicados:
+### Conceitos da U2 Aplicados:
 
-- **Estruturas condicionais:** As estruturas condicionais (`if-else`, `switch-case`) são o coração do fluxo de controle do programa. Elas são utilizadas extensivamente para a tomada de decisões, como na função `menuPrincipal`, que usa um `switch` para direcionar o usuário à funcionalidade escolhida; na função `avaliarExpressao`, onde uma série de `if-else if` distingue entre números, operadores e parênteses; e em funções de cálculo como `aplicarOperacao` e `calcularFuncoesTrig`, que utilizam `switch` e `if` para selecionar a operação matemática correta com base na entrada do usuário e para validar condições, como a divisão por zero ou o logaritmo de um número negativo.
+- **Alocação Dinâmica de Memória:** Este é o principal avanço do projeto. Em vez de um vetor estático com limite fixo, o histórico de cálculos agora é gerenciado com **`malloc`**, **`realloc`** e **`free`**. Isso permite que o histórico cresça conforme a necessidade do usuário, limitado apenas pela memória do sistema. O módulo de matrizes também depende inteiramente da alocação dinâmica para criar matrizes de tamanhos variados.
 
-- **Estruturas de repetição:** As estruturas de repetição (`for`, `while`, `do-while`) são fundamentais para a interatividade e o processamento de dados. Um laço `do-while` em `menuPrincipal` mantém o menu principal em execução até que o usuário decida sair. Laços `while` são usados dentro das calculadoras básica e científica para permitir que o usuário realize múltiplos cálculos em sequência. Já os laços `for` são empregados para percorrer os vetores, como na exibição e limpeza do histórico de cálculos e, de forma crucial, na implementação do fatorial. Além disso, a função `avaliarExpressao` depende de múltiplos laços `while` para processar a string da expressão caractere por caractere e para manipular as pilhas de operadores e números.
+- **Ponteiros e Aritmética de Ponteiros:** Os ponteiros são usados extensivamente para gerenciar a memória alocada dinamicamente. O projeto utiliza ponteiros para ponteiros (`double**`) para a criação da estrutura de dados da matriz, ponteiros para `structs` para gerenciar o histórico, e ponteiros de `char` para algoritmos eficientes de manipulação de strings, como a inversão "in-place".
 
-- **Vetores:** Os vetores são utilizados como a principal estrutura de dados do projeto para três finalidades distintas. Primeiramente, vetores de caracteres (`char[]`) são usados para armazenar strings, como a expressão matemática digitada pelo usuário (`expressao`) e os nomes das funções científicas. Em segundo lugar, um vetor global de `structs` (`historico[MAX_HISTORICO]`) armazena de forma persistente o histórico de todos os cálculos realizados durante a sessão. Por fim, de maneira mais complexa, dois vetores locais (`pilhaNumeros` e `pilhaOperadores`) na função `avaliarExpressao` são usados para implementar as pilhas necessárias para o funcionamento do algoritmo Shunting-Yard, que processa e calcula o resultado da expressão.
+- **Structs e Tipos de Dados Personalizados (`typedef`):** O projeto agora utiliza `structs` mais complexas para modelar dados. A `struct Matriz` encapsula os dados e dimensões, enquanto a `struct HistoricoDinamico` gerencia o ponteiro para os itens do histórico, sua capacidade e contagem. O uso de `typedef` torna o código mais limpo e legível.
 
-- **Funções:** Este código é altamente modularizado através do uso de 16 funções distintas, cada uma com uma responsabilidade bem definida, promovendo a reutilização e a clareza do código. Elas podem ser agrupadas em categorias: funções de interface com o usuário (`menuPrincipal`, `exibirMenu`), funções que implementam os modos de cálculo (`calculadoraBasica`, `calculadoraCientifica`), funções para gerenciamento de dados (`mostrarHistorico`, `limparHistorico`, `adicionarAoHistorico`), funções que compõem o núcleo do motor de cálculo (`avaliarExpressao`, `aplicarOperacao`, `precedencia`) e funções auxiliares para cálculos específicos e validações (`calcularFuncoesTrig`, `validarExpressao`, `ehNumero`).
+- **Modularidade e Organização de Código:** O código foi organizado em seções lógicas claras (Interface, Gerenciamento de Memória, Módulo de Matrizes, etc.), promovendo uma alta modularidade. Cada função tem uma responsabilidade única, o que facilita a manutenção e a expansão do projeto.
+
+- **Estruturas Condicionais e de Repetição:** `if-else`, `switch-case`, `for`, `while` e `do-while` continuam sendo a base para o fluxo de controle, menus interativos, validação de entradas, processamento de expressões e algoritmos de cálculo, agora aplicados também nos novos módulos de matrizes e strings.
+
+- **Funções e Vetores:** O projeto é composto por dezenas de funções especializadas. Vetores (arrays) ainda são utilizados para armazenar strings e como base para as pilhas do algoritmo Shunting-Yard, mas o destaque é a transição de vetores estáticos para dinâmicos nas estruturas de dados principais.
 
 ## 📚 Listas de Exercícios
 
@@ -77,12 +89,37 @@
 - ✅ Problema 3: A construção da ponte
 - ✅ Problema 4: Em busca do tesouro perdido
 
+### Semana 7 - Strings:
+- ✅ Problema 1: Campo minado 1D
+- ✅ Problema 2: Detecção de placas
+- ✅ Problema 3: OpenMeet
+
+### Semana 8 - Repetições Aninhadas:
+- ✅ Problema 1: Estou com sorte (ou não)
+- ✅ Problema 2: Os dias mais chuvosos
+- ✅ Problema 3: Esse sim é piloto
+
+### Semana 9 - Matrizes
+- ✅ Problema 1: Campo agrícola
+- ✅ Problema 2: Sugestão de amigos
+- ✅ Problema 3: Campeonato de empates
+- ✅ Problema 4: Uma pechincha
+
+### Semana 10 - Ponteiros (alocação)
+- ✅ Problema 1: Soma de vetores
+- ✅ Problema 2: Ocorrência de vetores
+- ✅ Problema 3: Sopa de letrinhas
+
 ## 🎯 Principais Aprendizados
-Aprendi muitas coisas durante a realização do curso.
+A evolução deste projeto solidificou e expandiu meus aprendizados:
+- A diferença fundamental entre alocação de memória estática e dinâmica.
+- A importância do gerenciamento manual de memória: a necessidade de usar `free` para evitar vazamentos de memória.
+- Como modelar estruturas de dados complexas, como matrizes de tamanho variável, usando ponteiros para ponteiros.
+- O poder e a flexibilidade de `realloc` para criar estruturas de dados que se adaptam ao uso.
+- A aplicação prática de ponteiros para criar algoritmos mais eficientes.
+- A importância de organizar o código em módulos lógicos para lidar com projetos maiores.
 - Quando estiver fácil é porque estou fazendo errado, ou seja, não subestimar os problemas dados.
 - A Internet é uma ferramenta maravilhosa para auxiliar o programador nas suas dificuldades.
-- Se importar com prazo de entrega.
-- Não ficar somente no superficial em qualquer assunto.
 
 ## 🔧 Ambiente de Desenvolvimento
 - **SO**: Windows 10
